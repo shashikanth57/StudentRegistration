@@ -1,13 +1,14 @@
-
-name: Student Registration Selenium Tests
+name: Student Registration CI/CD
 
 on:
   push:
     branches: [ "main" ]
+
   pull_request:
     branches: [ "main" ]
 
 jobs:
+
   selenium-tests:
     runs-on: ubuntu-latest
 
@@ -25,3 +26,24 @@ jobs:
       - name: Run Selenium Tests
         run: mvn clean test
 
+  docker-build-push:
+    needs: selenium-tests
+    if: github.event_name == 'push' && success()
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/student-registration:latest
