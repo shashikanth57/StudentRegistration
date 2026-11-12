@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-12T11:57:46 IST" name="Student Registration Suite" finished-at="2026-11-12T11:57:56 IST" duration-ms="9647">
+    <groups>
+    </groups>
+    <test started-at="2026-11-12T11:57:46 IST" name="Registration Tests" finished-at="2026-11-12T11:57:56 IST" duration-ms="9647">
+      <class name="com.student.StudentRegistrationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.student.StudentRegistrationTest@50b472aa]" started-at="2026-11-12T11:57:46 IST" name="setUp" finished-at="2026-11-12T11:57:55 IST" duration-ms="8451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptyFieldsValidation()[pri:0, instance:com.student.StudentRegistrationTest@50b472aa]" started-at="2026-11-12T11:57:55 IST" name="emptyFieldsValidation" finished-at="2026-11-12T11:57:55 IST" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyFieldsValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.student.StudentRegistrationTest@50b472aa]" started-at="2026-11-12T11:57:55 IST" name="tearDown" finished-at="2026-11-12T11:57:55 IST" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.student.StudentRegistrationTest@50b472aa]" started-at="2026-11-12T11:57:55 IST" name="setUp" finished-at="2026-11-12T11:57:55 IST" duration-ms="667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="successfulRegistration()[pri:0, instance:com.student.StudentRegistrationTest@50b472aa]" started-at="2026-11-12T11:57:55 IST" name="successfulRegistration" finished-at="2026-11-12T11:57:56 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfulRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.student.StudentRegistrationTest@50b472aa]" started-at="2026-11-12T11:57:56 IST" name="tearDown" finished-at="2026-11-12T11:57:56 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.student.StudentRegistrationTest -->
+    </test> <!-- Registration Tests -->
+  </suite> <!-- Student Registration Suite -->
+</testng-results>

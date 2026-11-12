@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h2>Student Registration</h2>
+
+    <form id="registrationForm">
+
+        <input type="text" id="name"
+               placeholder="Student Name">
+
+        <input type="email" id="email"
+               placeholder="Email ID">
+
+        <input type="text" id="usn"
+               placeholder="USN">
+
+        <select id="department">
+            <option value="">Select Department</option>
+            <option value="AIML">AIML</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="ISE">ISE</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+document.getElementById("registrationForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let usn = document.getElementById("usn").value.trim();
+    let department = document.getElementById("department").value;
+
+    let message = document.getElementById("message");
+
+    if (!name || !email || !usn || !department) {
+        message.style.color = "red";
+        message.innerHTML = "Please fill all fields!";
+    }
+    else {
+        message.style.color = "green";
+        message.innerHTML = "Registration Successful!";
+    }
+});
+</script>
+
+</body>
+</html>
